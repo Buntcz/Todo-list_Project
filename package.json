@@ -1,0 +1,18 @@
+{
+  "name": "todo-list_project",
+  "version": "1.0.0",
+  "description": "Todo list project using HTML, CSS, JavaScript, Node and Webpack, will try to implement a database in the end to store all the todos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^3.3.4",
+    "webpack-cli": "^5.1.4"
+  }
+}
