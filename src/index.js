@@ -1,3 +1,3 @@
-import { projectButton } from "./project";
+import { projectButton } from "./project_button";
 
 projectButton();
