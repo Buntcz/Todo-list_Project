@@ -20,18 +20,8 @@ function AddProject() {
     let newProject = new Project(title);
     myProjects.push(newProject);
     console.log(myProjects)
-    render();
+    createProject(newProject);
 }
-
-function render() {
-    const projectContainer = document.querySelector(".projectContainer")
-    const projects = document.querySelectorAll(".project")
-    projects.forEach(project => projectContainer.removeChild(project));
-    for(let i = 0; i < myProjects.length; i++) {
-        createProject(myProjects[i]);
-    }
-}
-
 
 
 function createProject(item) {

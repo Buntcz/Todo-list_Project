@@ -1,3 +1,14 @@
 .project {
     border: 1px solid black;
 }
+
+.projectContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.project {
+    height: 15rem;
+    width: 10rem;
+    border: 1px solid black;
+}
