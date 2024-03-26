@@ -9,19 +9,24 @@ class Project {
     }
 }
 
+function createProjectContainer() {
+    const projectContainer = document.createElement('div')
+    projectContainer.classList.add("projectContainer")
+    content.appendChild(projectContainer);
+}
+
 function AddProject() {
     let title = document.getElementById("P_title").value;
     let newProject = new Project(title);
     myProjects.push(newProject);
+    console.log(myProjects)
     render();
 }
 
 function render() {
-    const projectContainer = document.createElement('div');
-    projectContainer.classList.add("projectContainer")
-    content.appendChild(projectContainer);
+    const projectContainer = document.querySelector(".projectContainer")
     const projects = document.querySelectorAll(".project")
-
+    projects.forEach(project => projectContainer.removeChild(project));
     for(let i = 0; i < myProjects.length; i++) {
         createProject(myProjects[i]);
     }
@@ -43,4 +48,4 @@ function createProject(item) {
    
 }
 
-export {AddProject};
+export {AddProject, createProjectContainer};
