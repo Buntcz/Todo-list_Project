@@ -13,8 +13,8 @@ function projectButton() {
 }
 
 function makeFormVisible() {
-    const Pform = document.getElementById('Project_form');
-      Pform.style.display = "inline-block";
+    const pForm = document.getElementById('projectName');
+      pForm.showModal();
 }
 
 export {projectButton}

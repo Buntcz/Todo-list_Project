@@ -43,18 +43,19 @@ function createProject(item) {
    
    })
    
-   const editButton = document.createElement('button');
+ /*  const editButton = document.createElement('button');
    editButton.classList.add("editButton");
    editButton.textContent = "Edit button";
 
    editButton.addEventListener("click", function() {
     const ProjForm = document.getElementById("Project_form")
+    const projectDialog = document.getElementById("projectName");
    })
-   
+   */
    display.appendChild(projectCard);
    projectCard.appendChild(projectTitle);
    projectCard.appendChild(removeButton);
-   projectCard.appendChild(editButton)
+  //  projectCard.appendChild(editButton);
    
 }
 
