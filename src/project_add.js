@@ -1,4 +1,5 @@
 import "./style.css"
+import { createTaskContainer } from "./task_add";
 
 const myProjects = [];
 const content = document.getElementById("content")
@@ -7,6 +8,12 @@ class Project {
     constructor(title) {
         this.title = title;
     }
+}
+
+function addDefaultProject() {
+  const defaultProject = new Project("default");
+  myProjects.push(defaultProject);
+  createProject(defaultProject)
 }
 
 function createProjectContainer() {
@@ -18,10 +25,15 @@ function createProjectContainer() {
 function AddProject() {
     let title = document.getElementById("P_title").value;
     let newProject = new Project(title);
+ if(myProjects.length < 3) {
     myProjects.push(newProject);
     console.log(myProjects)
     createProject(newProject);
+ } else if ( myProjects.length > 3) {
+    alert("You can have only up to three projects!");
+ }
 }
+
 
 
 function createProject(item) {
@@ -56,7 +68,7 @@ function createProject(item) {
    projectCard.appendChild(projectTitle);
    projectCard.appendChild(removeButton);
   //  projectCard.appendChild(editButton);
-   
+   createTaskContainer();
 }
 
-export {AddProject, createProjectContainer};
+export {AddProject, createProjectContainer, addDefaultProject, myProjects};
