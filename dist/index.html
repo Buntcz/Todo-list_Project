@@ -12,7 +12,7 @@
             <ul>
                 <li>
                     <label for="P_title">Title:</label>
-                    <input type="text" id="P_title" name = "user_p_title">
+                    <input type="text" id="P_title" name = "user_p_title" required>
                 </li>
             </ul>
             <button id="Project_Button" type="submit" form="Project_form" value="submit">Submit</button>
@@ -23,15 +23,15 @@
             <ul>
                 <li>
                     <label for="title">Title:</label>
-                    <input type="text" id="title" name = "user_title">
+                    <input type="text" id="title" name = "user_title " required>
                 </li>
                 <li> 
                     <label for="desc">Description:</label>
-                    <input type="text" id="desc" name="user_desc">
+                    <input type="text" id="desc" name="user_desc" required>
                 </li>
                 <li>
                     <label for="priority">Priority:</label>
-                    <select name="Priority" id="priority">
+                    <select name="Priority" id="priority" required>
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
                         <option value="high">High</option>
@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <label for="dueDate">Due Date:</label>
-                    <input type="date" name="due-date" id="dueDate">
+                    <input type="date" name="due-date" id="dueDate" required>
                 </li>
             </ul>
             <button id="task_submit" type="submit" form="task_Form" value="submit">Submit</button>

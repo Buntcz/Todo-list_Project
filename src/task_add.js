@@ -14,8 +14,10 @@ class Task {
 
 const firstTask = new Task("Build a todo list", "Find resources for the project code.", "22.05.2023", "high")
 
+
+
 function createTaskContainer(projectElement) {
-    const taskCard = document.createElement("div");
+    let taskCard = document.createElement("div");
     taskCard.classList.add("taskContainer");
     projectElement.appendChild(taskCard);
 
@@ -23,14 +25,41 @@ function createTaskContainer(projectElement) {
 }
  
 function addTodo() {
-    const todoTitle = document.getElementById("title").value;
-    const todoDesc = document.getElementById("desc").value;
-    const todoPriority = document.getElementById("priority").value;
-    const todoDate = document.getElementById("dueDate").value;
+    const title = document.getElementById("title").value;
+    const description = document.getElementById("desc").value;
+    const priority = document.getElementById("priority").value;
+    const dueDate = document.getElementById("dueDate").value;
 
-    const newTask = new Task(todoTitle, todoDesc, todoPriority, todoDate);
+    const newTask = new Task(title, description, priority, dueDate);
     myTasks.push(newTask);
-    console.log(myTasks);
+    createTodoTask(newTask, taskCard);
+}
+
+function createTodoTask(item, place) {
+    const todoElement = document.createElement("div");
+   todoElement.classList.add("todoElement");
+
+    const taskTitle = document.createElement("p");
+   taskTitle.classList.add("taskTitle");
+   taskTitle.textContent = item.title;
+
+   const taskDesc = document.createElement("p");
+  taskDesc.classList.add("taskDesc");
+  taskDesc.textContent = item.description;
+
+   const taskPriority = document.createElement("p");
+   taskPriority.classList.add("taskPriority");
+   taskPriority.textContent = item.priority;
+
+   const taskDueDate = document.createElement("p");
+   taskDueDate.classList.add("taskDueDate");
+   taskDueDate.textContent = item.dueDate;
+
+   todoElement.appendChild(taskTitle);
+   todoElement.appendChild(taskDesc);
+   todoElement.appendChild(taskPriority);
+   todoElement.appendChild(taskDueDate);
+   place.appendChild(todoElement);
 }
 
 export {createTaskContainer, addTodo};
