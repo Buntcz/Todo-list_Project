@@ -1,5 +1,6 @@
 import { projectButton } from "./project_button";
 import { AddProject, createProjectContainer, addDefaultProject } from "./project_add";
+import { printNewTask } from "./task_add";
 
 const Pform = document.getElementById("Project_form");
 const pDialog = document.getElementById("projectName");
@@ -14,3 +15,4 @@ Pform.addEventListener('submit', function(event) {
 projectButton();
 createProjectContainer();
 addDefaultProject();
+printNewTask();

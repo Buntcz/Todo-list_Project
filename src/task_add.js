@@ -10,12 +10,20 @@ class Task {
 
     }
 }
- 
-function createTaskContainer() {
+
+const firstTask = new Task("Build a todo list", "Find resources", "22.05.2023", "high")
+
+function createTaskContainer(projectElement) {
     const taskCard = document.createElement("div");
     taskCard.classList.add("taskContainer");
-   projectCard.appendChild(taskCard);
+    projectElement.appendChild(taskCard);
 }
  
-export {createTaskContainer};
+function printNewTask() {
+    console.log(firstTask)
+}
+
+
+export {createTaskContainer, printNewTask};
+
 

@@ -68,7 +68,7 @@ function createProject(item) {
    projectCard.appendChild(projectTitle);
    projectCard.appendChild(removeButton);
   //  projectCard.appendChild(editButton);
-   createTaskContainer();
+   createTaskContainer(projectCard);
 }
 
 export {AddProject, createProjectContainer, addDefaultProject, myProjects};
