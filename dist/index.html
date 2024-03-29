@@ -18,7 +18,8 @@
             <button id="Project_Button" type="submit" form="Project_form" value="submit">Submit</button>
         </form>
         </dialog>
-        <form id="Task_form" style="display: none;">
+        <dialog id="taskAdd">
+        <form method="dialog" id="task_Form">
             <ul>
                 <li>
                     <label for="title">Title:</label>
@@ -41,8 +42,9 @@
                     <input type="date" name="due-date" id="dueDate">
                 </li>
             </ul>
-            <button id="task_submit" type="submit" form="Task_form" value="Submit">Submit</button>
+            <button id="task_submit" type="submit" form="task_Form" value="submit">Submit</button>
         </form>
+        </dialog>
     </div>
 <script defer src="main.js"></script></body>
 </html>
