@@ -7,14 +7,12 @@ class Task {
         this.title = title;
         this.description = description;
         this.priority = priority;
-        this.dueDate = dueDate
+        this.dueDate = dueDate;
 
     }
 }
 
 const firstTask = new Task("Build a todo list", "Find resources for the project code.", "22.05.2023", "high")
-
-
 
 function createTaskContainer(projectElement) {
     const taskCard = document.createElement("div");
@@ -22,7 +20,8 @@ function createTaskContainer(projectElement) {
     projectElement.appendChild(taskCard);
 
     createTodoButton(taskCard);
-}
+    
+} 
  
 function addTodo() {
     const title = document.getElementById("title").value;
@@ -37,10 +36,9 @@ function addTodo() {
 }
 
 function createTodoTask(item) {
-   const taskCard = document.querySelector(".taskContainer")
 
     const todoElement = document.createElement("div");
-   todoElement.classList.add("todoElement");
+    todoElement.classList.add("todoElement");
 
     const taskTitle = document.createElement("p");
    taskTitle.classList.add("taskTitle");
