@@ -1,5 +1,6 @@
 import "./style.css"
 import { createTaskContainer } from "./task_add";
+import { myTasks } from "./task_add";
 
 const myProjects = [];
 const content = document.getElementById("content")
@@ -52,7 +53,7 @@ function createProject(item) {
    removeButton.addEventListener("click", function() {
    projectCard.outerHTML = " ";
    myProjects.splice(myProjects.indexOf(item),  1);
-   
+   myTasks.splice(0, myTasks.length);
    })
    
  /*  const editButton = document.createElement('button');

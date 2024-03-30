@@ -17,7 +17,7 @@ const firstTask = new Task("Build a todo list", "Find resources for the project 
 
 
 function createTaskContainer(projectElement) {
-    let taskCard = document.createElement("div");
+    const taskCard = document.createElement("div");
     taskCard.classList.add("taskContainer");
     projectElement.appendChild(taskCard);
 
@@ -32,36 +32,39 @@ function addTodo() {
 
     const newTask = new Task(title, description, priority, dueDate);
     myTasks.push(newTask);
-    createTodoTask(newTask, taskCard);
+    console.log(myTasks);
+    createTodoTask(newTask);
 }
 
-function createTodoTask(item, place) {
+function createTodoTask(item) {
+   const taskCard = document.querySelector(".taskContainer")
+
     const todoElement = document.createElement("div");
    todoElement.classList.add("todoElement");
 
     const taskTitle = document.createElement("p");
    taskTitle.classList.add("taskTitle");
-   taskTitle.textContent = item.title;
+   taskTitle.textContent = `Title: ${item.title}`;
 
    const taskDesc = document.createElement("p");
   taskDesc.classList.add("taskDesc");
-  taskDesc.textContent = item.description;
+  taskDesc.textContent = `Description: ${item.description}`;
 
    const taskPriority = document.createElement("p");
    taskPriority.classList.add("taskPriority");
-   taskPriority.textContent = item.priority;
+   taskPriority.textContent = `Priority: ${item.priority}`;
 
    const taskDueDate = document.createElement("p");
    taskDueDate.classList.add("taskDueDate");
-   taskDueDate.textContent = item.dueDate;
+   taskDueDate.textContent = `Due: ${item.dueDate}`;
 
    todoElement.appendChild(taskTitle);
    todoElement.appendChild(taskDesc);
    todoElement.appendChild(taskPriority);
    todoElement.appendChild(taskDueDate);
-   place.appendChild(todoElement);
+   taskCard.appendChild(todoElement);
 }
 
-export {createTaskContainer, addTodo};
+export {createTaskContainer, addTodo, myTasks};
 
 
