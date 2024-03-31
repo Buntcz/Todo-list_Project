@@ -1,6 +1,7 @@
 import { projectButton } from "./project_button";
 import { AddProject, createProjectContainer, addDefaultProject } from "./project_add";
 import { addTodo } from "./task_add";
+import { createTodoButton } from "./todo_button";
 
 const Pform = document.getElementById("Project_form");
 const pDialog = document.getElementById("projectName");
@@ -22,5 +23,6 @@ todoForm.addEventListener("submit", function(event) {
 })
 
 projectButton();
+createTodoButton();
 createProjectContainer();
 addDefaultProject();

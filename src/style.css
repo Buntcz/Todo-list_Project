@@ -9,11 +9,24 @@
 
 .project {
     height: 15rem;
-    width: 33.3%;
+    width: 100%;
     border: 1px solid black;
+}
+
+.buttonSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.taskContainer {
+    width: 100px;
+    height: 150px;
 }
 
 #desc {
     width: 10rem;
     height: 5rem;
 }
+
+

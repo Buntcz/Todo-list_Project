@@ -19,7 +19,6 @@ function createTaskContainer(projectElement) {
     taskCard.classList.add("taskContainer");
     projectElement.appendChild(taskCard);
 
-    createTodoButton(taskCard);
     
 } 
  
@@ -36,7 +35,7 @@ function addTodo() {
 }
 
 function createTodoTask(item) {
-
+    const taskCard = document.querySelector(".taskContainer")
     const todoElement = document.createElement("div");
     todoElement.classList.add("todoElement");
 
@@ -56,11 +55,31 @@ function createTodoTask(item) {
    taskDueDate.classList.add("taskDueDate");
    taskDueDate.textContent = `Due: ${item.dueDate}`;
 
+   const buttonSection =  document.createElement("div");
+   buttonSection.classList.add("buttonSection")
+
+   const checkButton = document.createElement("input");
+   checkButton.type = "checkbox";
+   checkButton.id = "taskCheck";
+   checkButton.value = "taskCheck"
+
+   const deleteTaskButton = document.createElement("button");
+   deleteTaskButton.classList.add("deleteTaskButton");
+   deleteTaskButton.textContent = "Delete task";
+   deleteTaskButton.addEventListener("click", function() {
+    todoElement.outerHTML = " ";
+    myTasks.splice(myTasks.indexOf(item), 1)
+   })
+
    todoElement.appendChild(taskTitle);
    todoElement.appendChild(taskDesc);
    todoElement.appendChild(taskPriority);
    todoElement.appendChild(taskDueDate);
+   todoElement.appendChild(buttonSection);
+   buttonSection.appendChild(checkButton);
+   buttonSection.appendChild(deleteTaskButton);
    taskCard.appendChild(todoElement);
+   
 }
 
 export {createTaskContainer, addTodo, myTasks};

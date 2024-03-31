@@ -1,10 +1,11 @@
 import "./style.css"
 
-function createTodoButton(taskElement) {
+function createTodoButton() {
+    const content = document.getElementById("content")
     const taskButton = document.createElement("button");
     taskButton.classList.add("taskAddButton");
     taskButton.textContent = "Add task";
-    taskElement.appendChild(taskButton);
+    content.appendChild(taskButton);
     taskButton.addEventListener("click", showTaskForm);
 }
 

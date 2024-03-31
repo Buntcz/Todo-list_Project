@@ -12,7 +12,7 @@ class Project {
 }
 
 function addDefaultProject() {
-  const defaultProject = new Project("default");
+  const defaultProject = new Project("Default Project");
   myProjects.push(defaultProject);
   createProject(defaultProject)
 }
@@ -26,14 +26,15 @@ function createProjectContainer() {
 function AddProject() {
     let title = document.getElementById("P_title").value;
     let newProject = new Project(title);
- if(myProjects.length < 3) {
+ if(myProjects.length < 1) {
     myProjects.push(newProject);
     console.log(myProjects)
     createProject(newProject);
- } else if ( myProjects.length > 3) {
-    alert("You can have only up to three projects!");
+ } else {
+  alert("Right now you can create only up to one project due to bugs, sorry for the inconvinience")
  }
-}
+ }
+
 
 
 
