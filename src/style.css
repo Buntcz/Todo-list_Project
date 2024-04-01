@@ -1,6 +1,4 @@
-.project {
-    border: 1px solid black;
-}
+
 
 .projectContainer {
     display: flex;
@@ -8,9 +6,8 @@
 }
 
 .project {
-    height: 15rem;
+    height: 100%;
     width: 100%;
-    border: 1px solid black;
 }
 
 .buttonSection {
@@ -20,8 +17,16 @@
 }
 
 .taskContainer {
-    width: 100px;
-    height: 150px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.todoElement {
+    margin: 1rem;
+    width: 120px;
+    height: 170px;
+    border: 2px solid black;
 }
 
 #desc {

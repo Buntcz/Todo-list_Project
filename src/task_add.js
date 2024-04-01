@@ -1,6 +1,6 @@
 import "./style.css"
 import { createTodoButton } from "./todo_button";
-const myTasks = [];
+let myTasks = [];
 
 class Task {
     constructor(title, description, priority, dueDate) {
@@ -12,8 +12,6 @@ class Task {
     }
 }
 
-const firstTask = new Task("Build a todo list", "Find resources for the project code.", "22.05.2023", "high")
-
 function createTaskContainer(projectElement) {
     const taskCard = document.createElement("div");
     taskCard.classList.add("taskContainer");
@@ -21,7 +19,6 @@ function createTaskContainer(projectElement) {
 
     
 } 
- 
 function addTodo() {
     const title = document.getElementById("title").value;
     const description = document.getElementById("desc").value;
@@ -30,7 +27,7 @@ function addTodo() {
 
     const newTask = new Task(title, description, priority, dueDate);
     myTasks.push(newTask);
-    console.log(myTasks);
+    localStorage.setItem("todos", JSON.stringify(myTasks))
     createTodoTask(newTask);
 }
 
@@ -68,8 +65,9 @@ function createTodoTask(item) {
    deleteTaskButton.textContent = "Delete task";
    deleteTaskButton.addEventListener("click", function() {
     todoElement.outerHTML = " ";
-    myTasks.splice(myTasks.indexOf(item), 1)
+    myTasks.splice(myTasks.indexOf(item), 1);
    })
+   
 
    todoElement.appendChild(taskTitle);
    todoElement.appendChild(taskDesc);

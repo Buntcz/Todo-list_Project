@@ -2,7 +2,7 @@ import "./style.css"
 import { createTaskContainer } from "./task_add";
 import { myTasks } from "./task_add";
 
-const myProjects = [];
+let myProjects = [];
 const content = document.getElementById("content")
 
 class Project {
@@ -15,6 +15,7 @@ function addDefaultProject() {
   const defaultProject = new Project("Default Project");
   myProjects.push(defaultProject);
   createProject(defaultProject)
+  localStorage.setItem("title", JSON.stringify(defaultProject.title));
 }
 
 function createProjectContainer() {
@@ -29,6 +30,7 @@ function AddProject() {
  if(myProjects.length < 1) {
     myProjects.push(newProject);
     console.log(myProjects)
+    localStorage.setItem("project", JSON.stringify(myProjects));
     createProject(newProject);
  } else {
   alert("Right now you can create only up to one project due to bugs, sorry for the inconvinience")
@@ -54,6 +56,7 @@ function createProject(item) {
    removeButton.addEventListener("click", function() {
    projectCard.outerHTML = " ";
    myProjects.splice(myProjects.indexOf(item),  1);
+   localStorage.clear();
    myTasks.splice(0, myTasks.length);
    })
    

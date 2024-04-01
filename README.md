@@ -8,4 +8,4 @@ Made it so a task is displayed but now I have to:
 Couldn't fix the bug so I'll just be sticking to one project for now. Current things i need to do in order below.
 1. Style it so it looks better(In the end I might just give the ability to change the name of the project, because it looks ugly.);
 2. set up the storage.
-3. Style
+3. Style it fully.
