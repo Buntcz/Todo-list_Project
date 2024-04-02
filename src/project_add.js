@@ -11,11 +11,11 @@ class Project {
     }
 }
 
-function addDefaultProject() {
-  const defaultProject = new Project("Default Project");
+ function addDefaultProject() {
+  /* const defaultProject = new Project("Default Project");
   myProjects.push(defaultProject);
   createProject(defaultProject)
-  localStorage.setItem("title", JSON.stringify(defaultProject.title));
+  */
 }
 
 function createProjectContainer() {
@@ -76,4 +76,4 @@ function createProject(item) {
    createTaskContainer(projectCard);
 }
 
-export {AddProject, createProjectContainer, addDefaultProject, myProjects};
+export {AddProject, createProjectContainer, addDefaultProject, myProjects, createProject};

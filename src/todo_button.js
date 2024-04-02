@@ -11,12 +11,7 @@ function createTodoButton() {
 
 function showTaskForm() {
     const taskForm = document.getElementById("taskAdd");
-    if (myProjects.length < 1) {
-        alert("Create a project first.") 
-        } else {
-    
     taskForm.showModal();
-        }
 }
 
 export { createTodoButton };

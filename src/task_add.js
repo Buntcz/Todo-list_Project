@@ -1,3 +1,4 @@
+import { isToday } from "date-fns";
 import "./style.css"
 import { createTodoButton } from "./todo_button";
 let myTasks = [];
@@ -16,9 +17,16 @@ function createTaskContainer(projectElement) {
     const taskCard = document.createElement("div");
     taskCard.classList.add("taskContainer");
     projectElement.appendChild(taskCard);
-
-    
 } 
+
+function addDefaultTask() {
+   /* const defaultTask = new Task("StartTask", "Start", "Start", new Date(isToday));
+    myTasks.push(defaultTask);
+    createTodoTask(defaultTask);
+    localStorage.setItem("todos", JSON.stringify(myTasks));
+    */
+}
+
 function addTodo() {
     const title = document.getElementById("title").value;
     const description = document.getElementById("desc").value;
@@ -80,6 +88,6 @@ function createTodoTask(item) {
    
 }
 
-export {createTaskContainer, addTodo, myTasks};
+export {createTaskContainer, addTodo, addDefaultTask, myTasks, createTodoTask};
 
 
