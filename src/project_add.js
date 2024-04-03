@@ -11,13 +11,6 @@ class Project {
     }
 }
 
- function addDefaultProject() {
-  /* const defaultProject = new Project("Default Project");
-  myProjects.push(defaultProject);
-  createProject(defaultProject)
-  */
-}
-
 function createProjectContainer() {
     const projectContainer = document.createElement('div')
     projectContainer.classList.add("projectContainer")
@@ -60,20 +53,19 @@ function createProject(item) {
    myTasks.splice(0, myTasks.length);
    })
    
- /*  const editButton = document.createElement('button');
+   const editButton = document.createElement('button');
    editButton.classList.add("editButton");
    editButton.textContent = "Edit button";
 
    editButton.addEventListener("click", function() {
-    const ProjForm = document.getElementById("Project_form")
-    const projectDialog = document.getElementById("projectName");
-   })
-   */
+    alert("currently not working, sorry")
+   }) 
+
    display.appendChild(projectCard);
    projectCard.appendChild(projectTitle);
    projectCard.appendChild(removeButton);
-  //  projectCard.appendChild(editButton);
+   projectCard.appendChild(editButton);
    createTaskContainer(projectCard);
 }
 
-export {AddProject, createProjectContainer, addDefaultProject, myProjects, createProject};
+export {AddProject, createProjectContainer, myProjects, createProject};

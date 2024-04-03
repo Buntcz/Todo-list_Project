@@ -1,5 +1,5 @@
 import { createProject } from "./project_add";
-import { createTodoTask } from "./task_add";
+import { createTodoTask , myTasks} from "./task_add";
 
 const localTodos = localStorage.getItem("todos");
 const todosParsed = JSON.parse(localTodos);
@@ -16,6 +16,7 @@ function localProjectsLoad() {
 function localTasksLoad() {
     for(let i = 0; i < todosParsed.length; i++) {
         createTodoTask(todosParsed[i]);
+        myTasks.push(todosParsed[i]);
     }
 }
 

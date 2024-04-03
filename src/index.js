@@ -26,7 +26,5 @@ todoForm.addEventListener("submit", function(event) {
 projectButton();
 createTodoButton();
 createProjectContainer();
-addDefaultProject();
-addDefaultTask();
 localProjectsLoad();
 localTasksLoad();

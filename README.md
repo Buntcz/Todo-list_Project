@@ -6,6 +6,8 @@ All parts of creating the projects are done, only need to make it so you can edi
 What do I need to do now:
 Made it so a task is displayed but now I have to:
 Couldn't fix the bug so I'll just be sticking to one project for now. Current things i need to do in order below.
-1. Style it so it looks better(In the end I might just give the ability to change the name of the project, because it looks ugly.);
-2. set up the storage.
-3. Style it fully.
+Storage set up but with a one cost. one is there is no default project for now , sorry.
+Also I can't figure out how to make the edit button work so I will try to fix it someday because I want to continue learning.
+The project is 90% done without the styling.
+I will try to finish the remaining 10% alongside my learning. 
+I'll just publish it now.

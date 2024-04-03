@@ -19,13 +19,6 @@ function createTaskContainer(projectElement) {
     projectElement.appendChild(taskCard);
 } 
 
-function addDefaultTask() {
-   /* const defaultTask = new Task("StartTask", "Start", "Start", new Date(isToday));
-    myTasks.push(defaultTask);
-    createTodoTask(defaultTask);
-    localStorage.setItem("todos", JSON.stringify(myTasks));
-    */
-}
 
 function addTodo() {
     const title = document.getElementById("title").value;
@@ -36,6 +29,7 @@ function addTodo() {
     const newTask = new Task(title, description, priority, dueDate);
     myTasks.push(newTask);
     localStorage.setItem("todos", JSON.stringify(myTasks))
+    console.log(myTasks);
     createTodoTask(newTask);
 }
 
@@ -75,6 +69,7 @@ function createTodoTask(item) {
     todoElement.outerHTML = " ";
     myTasks.splice(myTasks.indexOf(item), 1);
    })
+
    
 
    todoElement.appendChild(taskTitle);
@@ -86,8 +81,9 @@ function createTodoTask(item) {
    buttonSection.appendChild(deleteTaskButton);
    taskCard.appendChild(todoElement);
    
+   
 }
 
-export {createTaskContainer, addTodo, addDefaultTask, myTasks, createTodoTask};
+export {createTaskContainer, addTodo,myTasks, createTodoTask};
 
 
